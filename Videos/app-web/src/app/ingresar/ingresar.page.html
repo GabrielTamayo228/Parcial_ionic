@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-toolbar color="warning">
+      <ion-buttons slot="start">
+        <ion-button expand="block" (click)="irInicio()">
+          <ion-icon name="arrow-back"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    <ion-title>Productos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content>
+<div class="ww">
+
+<div class="triangle">
+  <div class="td"></div>
+  <div class="ti"></div>
+</div>
+
+<div class="box">
+  <form (ngSubmit)="Save()">
+  <ion-item>
+    <ion-label position="floating">Presupuesto</ion-label>
+    <ion-input [(ngModel)]="producto.presupuesto" name="presupuesto"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Unidad</ion-label>
+    <ion-input [(ngModel)]="producto.unidad" name="unidad"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Producto</ion-label>
+    <ion-input [(ngModel)]="producto.producto" name="producto"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Cantidad</ion-label>
+    <ion-input [(ngModel)]="producto.cantidad" name="cantidad" type="number"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Valor Unitario</ion-label>
+    <ion-input [(ngModel)]="producto.valor_unitario" name="valor_unitario" type="number"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Valor Total</ion-label>
+    <ion-input [(ngModel)]="producto.valor_total" name="valor_total" type="number"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Fecha de Adquisición</ion-label>
+    <ion-input [(ngModel)]="producto.fecha_adquisicion" name="fecha_adquisicion" type="Date"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Proveedor</ion-label>
+    <ion-input [(ngModel)]="producto.proveedor" name="proveedor"></ion-input>
+  </ion-item>
+  
+  <div class="btn_div">
+    <button class="btn" type="submit">{{ New ? 'Agregar' : 'Actualizar' }}</button>
+  </div>
+
+  <ion-button class="btn" *ngIf="!New" expand="full" color="danger" (click)="Delete()">Eliminar</ion-button>
+
+    </form>
+</div>
+
+</div>
+  
+</ion-content>

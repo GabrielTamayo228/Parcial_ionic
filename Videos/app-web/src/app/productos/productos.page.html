@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar color="warning">
+      <ion-buttons slot="start">
+        <ion-button expand="block" (click)="irInicio()">
+          <ion-icon name="arrow-back"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    <ion-title>Productos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content>
+<div class="ww">
+
+<div class="triangle">
+  <div class="td"></div>
+  <div class="ti"></div>
+</div>
+
+<div class="box">
+
+  <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="filterProductos()"></ion-searchbar>
+  <ion-list>
+    <ion-item-sliding *ngFor="let producto of productos">
+      
+      <ion-item (click)="VP(producto.id)">
+        <ion-label>{{producto.producto}}</ion-label>
+      </ion-item>
+
+      
+     
+      <ion-item-options>
+        <ion-item-option color="warning" (click)="Update(producto.id)">
+          <ion-icon name="pencil-outline" slot="icon-only"></ion-icon>
+        </ion-item-option>
+        <ion-item-option color="danger" (click)="Delete(producto.id)">
+          <ion-icon name="skull-outline" slot="icon-only"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+  
+
+</div>
+
+</div>
+  
+</ion-content>

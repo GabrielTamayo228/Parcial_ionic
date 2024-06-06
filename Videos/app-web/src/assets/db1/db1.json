@@ -1,0 +1,23 @@
+{
+    "database": "productos.db",
+    "version": 1,
+    "encrypted": false,
+    "mode": "full",
+    "tables": [
+      {
+        "name": "productos",
+        "schema": [
+          { "column": "id", "value": "INTEGER PRIMARY KEY NOT NULL" },
+          { "column": "presupuesto", "value": "INTEGER NOT NULL" },
+          { "column": "unidad", "value": "TEXT NOT NULL" },
+          { "column": "cantidad", "value": "INTEGER NOT NULL" },
+          { "column": "producto", "value": "TEXT NOT NULL" },
+          { "column": "valor_unitario", "value": "REAL NOT NULL" },
+          { "column": "valor_total", "value": "REAL NOT NULL" },
+          { "column": "fecha_adquisicion", "value": "TEXT NOT NULL" },
+          { "column": "proveedor", "value": "TEXT NOT NULL" }
+        ]
+      }
+    ]
+  }
+  
